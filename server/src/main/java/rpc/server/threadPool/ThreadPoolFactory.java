@@ -36,7 +36,7 @@ public class ThreadPoolFactory {
         return pool;
     }
 
-    public static void Shutdown(){
+    public static void shutDown(){
         logger.info("关闭所有线程池...");
         threadPoolsMap.entrySet().parallelStream().forEach(entry->{
             ExecutorService executorService=entry.getValue();
